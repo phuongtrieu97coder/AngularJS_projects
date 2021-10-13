@@ -1,0 +1,12 @@
+{
+    "total_language":[
+        "html","css","sass","javascript",
+        "php","mysql","nodejs","asp",
+        "angularJS","reactJS","bootstrap","w3css"
+    ],
+    
+    "language":{
+        "_front_end":["html","css","sass","javascript"],
+        "_back_end":["php","mysql","nodejs","asp"]
+    }
+}
