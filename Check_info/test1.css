@@ -1,0 +1,19 @@
+[id="block2"]{
+    
+    border:2px solid blue;
+    padding:20px;
+    text-align:center;
+}
+
+
+[id="block2_info_block"]{
+    display:grid;
+    grid-template-columns: 400px 400px 400px;
+}
+
+
+[id="block2_info_block_2"] table , tr, th, td{
+      border:2px solid green;
+      border-collapse:collapse;
+      padding:20px;
+}
