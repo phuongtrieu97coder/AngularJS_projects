@@ -171,6 +171,32 @@
 
        <div id="block1" ng-app="app1" ng-controller="app1_controller">  
 
+
+        <?php
+        
+        $name = $email = $address = $gender = $telephone = $car_select = "";
+
+        if($_SERVER["REQUEST_METHOD"] == "POST"){
+               $name = check_func($_POST["name1"]);
+               $email = check_func($_POST["email1"]);
+               $address = check_func($_POST["address1"]);
+               $gender = check_func($_POST["gender1"]);
+               $telephone = check_func($_POST["tel1"]);
+               $car_select = check_func($_POST["car_select1"]);
+
+
+              
+        }
+
+        function check_func($data){
+              $data = trim($data);
+              $data = stripslashes($data);
+              $data = htmlspecialchars($data);
+              return $data;
+       }
+        
+        ?>
+
         
           <div id="block1_1">
               <form id="form1_block" name="form1" title="form 1 block"
@@ -344,11 +370,11 @@
 
 
                  <label><b>Gender:</b></label><br>
-                 <input id="male_check" name="male1" type="checkbox" value="male" ng-model="male_mol1">
+                 <input id="male_check" name="gender1" type="checkbox" value="male" ng-model="male_mol1">
                  <label for="male_check"><b>Male</b></label>
-                 <input id="female_check" name="female1" type="checkbox" value="female" ng-model="female_mol1">
+                 <input id="female_check" name="gender1" type="checkbox" value="female" ng-model="female_mol1">
                  <label for="female_check"><b>Female</b></label>
-                 <input id="other_check" name="other1" type="checkbox" value="other" ng-model="other_mol1">
+                 <input id="other_check" name="gender1" type="checkbox" value="other" ng-model="other_mol1">
                  <label for="other_check"><b>Other</b></label>
 
 
@@ -405,20 +431,21 @@
 
                     <div id="account_info_block">
                            <div id="account_info_block_1">
-                           <b>Name:</b> <i class="text-white">{{name1_mol}}</i>
+                           <b>Name:</b> <i class="text-white">{{name1_mol}} <?php echo $name;?></i>
                             <br>
-                            <b>Email:</b> <i class="text-white">{{email1_mol}}</i>
+                            <b>Email:</b> <i class="text-white">{{email1_mol}}  <?php echo $email;?></i>
                             <br>
-                            <b>Address:</b> <i class="text-white">{{address1_mol}}</i>
+                            <b>Address:</b> <i class="text-white">{{address1_mol}}  <?php echo $address;?></i>
                             <br>
-                            <b>Phone:</b> <i class="text-white">{{tel1_mol}}</i>
+                            <b>Phone:</b> <i class="text-white">{{tel1_mol}}  <?php echo $telephone;?></i>
                             <br>
                             <b>Gender:</b> <i class="text-white" ng-show="male_mol1">Male</i>
                             <i class="text-white" ng-show="female_mol1">Female</i>
                             <i class="text-white" ng-show="other_mol1">Other</i>
+                            <?php echo $gender;?>
                             <br>
                             <b>Car select:</b> <br>
-                            <b> Model : </b> <i id="car_model_result" class="text-white">{{car_select_mol}}</i>
+                            <b> Model : </b> <i id="car_model_result" class="text-white">{{car_select_mol}}  <?php echo $car_select;?></i>
                              
                                    
                                  
