@@ -124,7 +124,7 @@
                }
 
                [id="account_info_block_2"]{
-                      height:180px;
+                      height:200px;
                       border:1px solid aqua;
                       position:relative;
                       top:0;
@@ -217,21 +217,7 @@
 
 
               
-              <!--
-
-              Pagani Huayra Roadster 3252
-
-
-              Bugatti Chiron-76878
-
-              Lamborghini Veneno-38724
-
-
-              Ferrari Aperta-768452
-
-              Mclaren Speedtail-462150
-
-              -->
+           
 
                  <label for="car_select"><b>Car selection:</b></label>
                  <span class="text-danger" ng-show="form1.car_select1.$error.required">Please select any car!!!</span>
@@ -244,11 +230,11 @@
 
                        <option disabled selected>---Select any car---</option>
                         
-                       <option value="Pagani Huayra Roadster 3252">{{car1_block[0].model}}</option>
-                       <option value="Bugatti Chiron-76878">{{car1_block[1].model}}</option>
-                       <option value="Lamborghini Veneno-38724">{{car1_block[2].model}}</option>
-                       <option value="Ferrari Aperta-768452">{{car1_block[3].model}}</option>
-                       <option value="Mclaren Speedtail-462150">{{car1_block[4].model}}</option>
+                       <option value="Pagani Huayra Roadster 3252">Pagani Huayra Roadster 3252</option>
+                       <option value="Bugatti Chiron-76878">Bugatti Chiron-76878</option>
+                       <option value="Lamborghini Veneno-38724">Lamborghini Veneno-38724</option>
+                       <option value="Ferrari Aperta-768452">Ferrari Aperta-768452</option>
+                       <option value="Mclaren Speedtail-462150">Mclaren Speedtail-462150</option>
                  </select>
 
 
@@ -445,7 +431,49 @@
                             <?php echo $gender;?>
                             <br>
                             <b>Car select:</b> <br>
-                            <b> Model : </b> <i id="car_model_result" class="text-white">{{car_select_mol}}  <?php echo $car_select;?></i>
+                            <b> Model : </b> <i class="text-white">{{car_select_mol}} <?php echo $car_select;?></i> <br>
+                             
+                            <b> Brand : </b>  <i class="text-white">
+                                   <?php
+                             echo check_func("{{car_brand_func()}}");
+                                if($car_select == "Pagani Huayra Roadster 3252"){
+                                    echo "Pagani";
+                                }else if($car_select == "Bugatti Chiron-76878"){
+                                       echo "Bugatti";
+                                }else if($car_select == "Lamborghini Veneno-38724"){
+                                       echo "Lamborghini";
+                                }else if($car_select == "Ferrari Aperta-768452"){
+                                       echo "Ferrari";
+                                }else if($car_select == "Mclaren Speedtail-462150"){
+                                   echo  "Mclaren";
+                                }else{
+                                   echo  " ";
+                                }
+                             ?>  
+                             </i><br>
+
+
+                           
+                             
+                            <b> Price : </b>  <i class="text-white">
+                                   <?php
+                                    echo check_func("{{car_price_func()}}");
+                                    if($car_select == "Pagani Huayra Roadster 3252"){
+                                          echo  "$1,500,000";
+                                   }else if($car_select == "Bugatti Chiron-76878"){
+                                          echo  "$4,800,000";
+                                   }else if($car_select == "Lamborghini Veneno-38724"){
+                                          echo  "$3,700,000";
+                                   }else if($car_select == "Ferrari Aperta-768452"){
+                                          echo  "$2,800,000";
+                                   }else if($car_select == "Mclaren Speedtail-462150"){
+                                          echo "$3,950,000";
+                                   }else{
+                                          echo  " ";
+                                   }
+                                    ?> 
+                                    
+                            </i><br>
                              
                                    
                                  
@@ -581,7 +609,7 @@
 
          <script>
                 var app = angular.module("app1",[]);
-                app.controller("app1_controller",function($scope,service1){
+                app.controller("app1_controller",function($scope){
                      $scope.car1_block = [
                             {model:"Pagani Huayra Roadster 3252",brand:"Pagani",price:"$1,500,000"},
                             {model:"Bugatti Chiron-76878",brand:"Bugatti",price:"$4,800,000"},
@@ -590,14 +618,49 @@
                             {model:"Mclaren Speedtail-462150",brand:"Mclaren",price:"$3,950,000"},
 
                      ];
-                     $scope.ser1 = service1.func1();
-                     
-                });
-                app.service("service1",function(){
-                            this.func1 = function(){
-                                   return "Hello";
+                    
+                     $scope.car_brand_func  = function(){
+                             if($scope.car_select_mol == $scope.car1_block[0].model){
+                                    return $scope.car1_block[0].brand;
+                            
+                             }else if($scope.car_select_mol == $scope.car1_block[1].model){
+                                    return $scope.car1_block[1].brand;
+                            
+                             }else if($scope.car_select_mol == $scope.car1_block[2].model){
+                                    return $scope.car1_block[2].brand;
+                            
+                             }else if($scope.car_select_mol == $scope.car1_block[3].model){
+                                    return $scope.car1_block[3].brand;
+                            
+                             }else if($scope.car_select_mol == $scope.car1_block[4].model){
+                                    return $scope.car1_block[4].brand;
+                             }else{
+                                    return " ";
+                             }
+                     }
+                            $scope.car_price_func  = function(){
+                                   if($scope.car_select_mol == $scope.car1_block[0].model){
+                                          return $scope.car1_block[0].price;
+
+                                   }else if($scope.car_select_mol == $scope.car1_block[1].model){
+                                          return $scope.car_block[1].price;
+                                   
+                                   }else if($scope.car_select_mol == $scope.car1_block[2].model){
+                                          return $scope.car1_block[2].price;
+
+                                   }else if($scope.car_select_mol == $scope.car1_block[3].model){
+                                          return $scope.car1_block[3].price;
+
+                                   }else if($scope.car_select_mol == $scope.car1_block[4].model){
+                                          return $scope.car1_block[4].price;
+                                   }else{
+                                          return " ";
+                                   }
                             }
-                     });
+                });
+              
+                     
+                  
          </script>
  
 
@@ -618,24 +681,7 @@
 
 
 
-        <!--
-
-        34,44,420,450
-       https://www.w3schools.com/html/computer.htm
-
-
-
-            500,180,333,250
-       https://www.w3schools.com/html/phone.htm
-
-
-
-       450,200,650,450
-       https://www.w3schools.com/html/coffee.htm
-
-       
-       
-       --> 
+     
 
            
        
