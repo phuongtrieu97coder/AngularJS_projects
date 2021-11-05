@@ -643,7 +643,7 @@
                                           return $scope.car1_block[0].price;
 
                                    }else if($scope.car_select_mol == $scope.car1_block[1].model){
-                                          return $scope.car_block[1].price;
+                                          return $scope.car1_block[1].price;
                                    
                                    }else if($scope.car_select_mol == $scope.car1_block[2].model){
                                           return $scope.car1_block[2].price;
