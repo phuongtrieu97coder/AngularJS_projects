@@ -26,4 +26,7 @@
 ![image](https://user-images.githubusercontent.com/82598726/181828437-03bf1b40-f35c-4e48-8ebd-127ef3a6f49d.png) ![image](https://user-images.githubusercontent.com/82598726/181828759-13c51469-e35d-44d6-af61-dfff064b7536.png) ![image](https://user-images.githubusercontent.com/82598726/181830075-a40dcdfe-519c-4a5d-90cd-c3eb308f8cce.png)
  ![image](https://user-images.githubusercontent.com/82598726/181828843-3ba0f2e8-a5dc-4268-b646-5b21898e1139.png) ![image](https://user-images.githubusercontent.com/82598726/181828934-4524165b-801b-44a8-97b4-3966d2eb3c93.png)
 
+# 3. License:
+
+![image](https://github.com/phuongtrieu97coder/AngularJS_project/assets/82598726/8c89f4bc-d3aa-4e44-a27b-ff69854a52f3)
 
