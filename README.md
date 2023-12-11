@@ -2,6 +2,8 @@
 
 ![image](https://user-images.githubusercontent.com/82598726/181836581-640582e1-8e42-4448-832f-f33126091d4b.png)
 
+# AngularJS Projects
+
 # 1. Purpose:
 
 - This repository contains all the projects that have been made using AngularJS that combine with other languages most of the time. 
