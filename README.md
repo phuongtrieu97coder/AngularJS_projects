@@ -1,6 +1,4 @@
-![image](https://img.shields.io/badge/ANGULARJS-red?style=for-the-badge&logo=angularjs) ![image](https://img.shields.io/badge/PHP-white?style=for-the-badge&logo=php) ![image](https://img.shields.io/badge/MYSQL-white?style=for-the-badge&logo=mysql)  ![image](https://img.shields.io/badge/mongoDB-black?style=for-the-badge&logo=mongodb)  ![image](https://img.shields.io/badge/HTML5-black?style=for-the-badge&logo=html5) ![image](https://img.shields.io/badge/CSS3-black?style=for-the-badge&logo=css3) ![image](https://img.shields.io/badge/Bootstrap-white?style=for-the-badge&logo=bootstrap) ![image](https://img.shields.io/badge/JavaScript-black?style=for-the-badge&logo=javascript) ![image](https://img.shields.io/badge/NodeJS-black?style=for-the-badge&logo=node.js) ![image](https://img.shields.io/badge/jQuery-black?style=for-the-badge&logo=jquery) ![image](https://img.shields.io/badge/JSON-black?style=for-the-badge&logo=json)
-
-![image](https://user-images.githubusercontent.com/82598726/181836581-640582e1-8e42-4448-832f-f33126091d4b.png)
+![image](https://github.com/user-attachments/assets/93b5c2d2-edbf-4730-9be3-3f6f1d386612) ![image](https://user-images.githubusercontent.com/82598726/181836581-640582e1-8e42-4448-832f-f33126091d4b.png)
 
 # AngularJS Projects
 
